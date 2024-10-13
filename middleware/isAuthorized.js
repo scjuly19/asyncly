@@ -37,7 +37,6 @@ async function authorizationMiddleware({ command, ack, next, respond }) {
         await respond("You are not authorized to use this app. Please install the app first.");
         return;
     }
-    console.log('Authorized! Move to next!')
     // If authorized, move to the next handler
     await next();
 }
